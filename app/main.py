@@ -1,14 +1,6 @@
 # Importando módulo personalizado
 import utils
 
-# Llamando funcion get_population del modulo utils
-keys, values = utils.get_population()
-
-print(keys,values)
-
-# Obtener variable del módulo mod
-print(utils.A)
-
 # Datos
 data = [
   {
@@ -21,10 +13,24 @@ data = [
   }
 ]
 
-# País a filtrar
-country = 'Colombia'
-# country = input("Ingresa el país a filtrar:")
+def run():
+  # Llamando funcion get_population del modulo utils
+  keys, values = utils.get_population()
+  
+  print("Resultado de get_population:",keys,values)
+  
+  # Obtener variable del módulo mod
+  print("utils.A:",utils.A)
+  
 
-# Llamando a la función population_by_country del modulo utils
-result = utils.population_by_country(data,country)
-print(result)
+  # País a filtrar
+  country = 'Colombia'
+  # country = input("Ingresa el país a filtrar:")
+  
+  # Llamando a la función population_by_country del modulo utils
+  result = utils.population_by_country(data,country)
+  print("Resultado de population_by_country:",result)
+
+# Entry point para ejecutar el programa
+if __name__ == '__main__':
+  run()
